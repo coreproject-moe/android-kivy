@@ -24,8 +24,7 @@ jobs:
 
             - name: Install dependency
               run: |
-                  poetry install
-                  poetry shell
+                  ls
 
             # - run: buildozer --help
             # - name: Install Linux dependencies
