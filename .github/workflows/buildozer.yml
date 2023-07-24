@@ -1,3 +1,4 @@
+name: Android
 on:
     push:
         branches: ["master", v2]
@@ -9,7 +10,7 @@ on:
 env:
     PYTHONFORANDROID_PREREQUISITES_INSTALL_INTERACTIVE: 0
 
-name: Android
+
 jobs:
     Build:
         strategy:
