@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "android"
+version = "0.1.0"
+description = "A modern android app for CoreProject"
+authors = ["baseplate-admin","tokito69"]
+license = "AGPL-v3"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+kivy = "^2.2.1"
+kivymd = "^1.1.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
