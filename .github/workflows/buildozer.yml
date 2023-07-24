@@ -19,6 +19,7 @@ jobs:
               with:
                   python-version: ${{ matrix.python-version }}
             - uses: Gr1N/setup-poetry@v8
+            - run: poetry shell
             - run: buildozer --help
             - name: Install Linux dependencies
               run: sudo apt -y install automake
