@@ -27,8 +27,7 @@ jobs:
 
             - name: Install dependency
               run: |
-                  poetry install --no-interaction --no-root
-                  poetry shell
+                  pip install buildozer===1.5.0
 
             - run: buildozer --help
             - name: Install Linux dependencies
