@@ -1,16 +1,9 @@
-name: Android
-on:
-    push:
-        branches: ["master", v2]
-    pull_request:
-        # The branches below must be a subset of the branches above
-        branches: ["master"]
-
+on: [push]
 
 env:
     PYTHONFORANDROID_PREREQUISITES_INSTALL_INTERACTIVE: 0
 
-
+name: Android
 jobs:
     Build:
         strategy:
