@@ -1,0 +1,37 @@
+on: [push]
+
+env:
+    PYTHONFORANDROID_PREREQUISITES_INSTALL_INTERACTIVE: 0
+
+name: Android
+jobs:
+    Build:
+        strategy:
+            fail-fast: false
+            matrix:
+                python-version: ['3.8', '3.9', '3.10', '3.11']
+                os:
+                    - 'ubuntu-latest'
+
+        runs-on: ${{ matrix.os }}
+        steps:
+            - name: Setup python
+              uses: actions/setup-python@v4
+              with:
+                  python-version: ${{ matrix.python-version }}
+
+            - uses: actions/checkout@v3
+            - name: Install Poetry
+              uses: snok/install-poetry@v1
+              with:
+                  virtualenvs-create: true
+                  virtualenvs-in-project: true
+
+            - name: Install dependency
+              run: |
+                  poetry install --sync --no-interaction --no-root
+
+            - name: Install Linux dependencies
+              run: sudo apt install -y git zip unzip openjdk-17-jdk python3-pip autoconf libtool pkg-config zlib1g-dev libncurses5-dev libncursesw5-dev libtinfo5 cmake libffi-dev libssl-dev
+            - name: Build Buildozer
+              run: poetry run buildozer android debug
