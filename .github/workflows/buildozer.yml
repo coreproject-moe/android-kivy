@@ -24,10 +24,10 @@ jobs:
 
             - name: Install dependency
               run: |
-                  ls
+                  poetry install
 
-            # - run: buildozer --help
-            # - name: Install Linux dependencies
-            #   run: sudo apt -y install automake
-            # - name: buildozer android debug
-            #   run: buildozer android debug
+            - run: buildozer --help
+            - name: Install Linux dependencies
+              run: sudo apt -y install automake
+            - name: buildozer android debug
+              run: buildozer android debug
