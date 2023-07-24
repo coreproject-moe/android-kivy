@@ -20,8 +20,12 @@ jobs:
                   python-version: ${{ matrix.python-version }}
 
             - name: Install Poetry
+              uses: snok/install-poetry@v1
+
+            - name: Install dependency
               run: |
-                  tree
+                  poetry install
+                  poetry shell
 
             # - run: buildozer --help
             # - name: Install Linux dependencies
