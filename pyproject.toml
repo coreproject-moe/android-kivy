@@ -2,7 +2,7 @@
 name = "android"
 version = "0.1.0"
 description = "A modern android app for CoreProject"
-authors = ["baseplate-admin","tattoo69"]
+authors = ["sheldon-shit","tokitou-san"]
 license = "AGPL-v3"
 readme = "README.md"
 
