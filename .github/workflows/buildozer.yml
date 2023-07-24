@@ -1,4 +1,4 @@
-on: [push, pull_request]
+on: [push]
 
 env:
     PYTHONFORANDROID_PREREQUISITES_INSTALL_INTERACTIVE: 0
