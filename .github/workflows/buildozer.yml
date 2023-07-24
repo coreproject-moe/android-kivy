@@ -1,4 +1,10 @@
-on: [push]
+on:
+    push:
+        branches: ["master", v2]
+    pull_request:
+        # The branches below must be a subset of the branches above
+        branches: ["master"]
+
 
 env:
     PYTHONFORANDROID_PREREQUISITES_INSTALL_INTERACTIVE: 0
