@@ -30,7 +30,6 @@ jobs:
               run: |
                   poetry install --sync --no-interaction --no-root
 
-            - run: poetry run buildozer --help
             - name: Install Linux dependencies
               run: sudo apt -y install automake
             - name: Build Buildozer
