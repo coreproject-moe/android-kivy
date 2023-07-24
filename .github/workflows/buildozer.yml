@@ -28,7 +28,7 @@ jobs:
 
             - name: Install dependency
               run: |
-                  poetry install
+                  poetry install --sync 
                   poetry shell
 
             - run: buildozer --help
