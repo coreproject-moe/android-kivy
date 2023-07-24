@@ -27,9 +27,8 @@ jobs:
 
             - name: Install dependency
               run: |
-                  pip install buildozer==1.5.0
-                  pip install kivy==2.2.1
-                  pip install kivymd==1.1.1
+                  poetry install
+                  poetry shell
 
             - run: buildozer --help
             - name: Install Linux dependencies
