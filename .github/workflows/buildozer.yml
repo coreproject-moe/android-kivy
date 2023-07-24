@@ -21,6 +21,7 @@ jobs:
             - name: Install Poetry
               run: |
                   pip install poetry
+                  poetry install
                   poetry shell
 
             - run: buildozer --help
