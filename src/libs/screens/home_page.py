@@ -1,7 +1,6 @@
 from kivy.uix.widget import Widget
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.screen import MDScreen
-from kivymd.uix.relativelayout import MDRelativeLayout
 from kivymd.uix.button import MDFillRoundFlatButton
 from kivy.utils import get_color_from_hex
 
@@ -12,7 +11,7 @@ class HomePage(MDScreen):
         self.add_widget(self.layout())
         self.md_bg_color = get_color_from_hex("#03020c")
 
-    def layout(self):
+    def layout(self) -> MDBoxLayout:
         # global variables
         empty_space = Widget()
 
@@ -21,7 +20,8 @@ class HomePage(MDScreen):
             size_hint_y = None,
             height = "50dp",
             pos_hint = {"top": 1},
-            padding = "10dp"
+            padding = "10dp",
+            orientation = "horizontal"
         )
         # CoreProject logo
         core_logo = MDFillRoundFlatButton(
