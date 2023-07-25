@@ -1,9 +1,3 @@
-from kivy import Config
-
-# config window size
-Config.set("graphics", "width", 360)
-Config.set("graphics", "height", 640)
-
 from kivymd.uix.screen import MDScreen
 from kivymd.uix.relativelayout import MDRelativeLayout
 from kivymd.uix.button import MDFillRoundFlatButton
