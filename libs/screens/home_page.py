@@ -12,7 +12,6 @@ class HomePage(MDScreen):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
 
-        # Add the complex layout using the new approach
         self.add_widget(self.layout())
 
     def layout(self):
@@ -22,7 +21,6 @@ class HomePage(MDScreen):
             pos_hint = {"top": 1}
         )
 
-        # Add the MDRectangleFlatButton to the MDBoxLayout
         button = MDFillRoundFlatButton(
             text="Logo",
             pos_hint={"x": 0, "top": 1}
