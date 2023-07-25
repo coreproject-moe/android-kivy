@@ -3,8 +3,8 @@ from kivy import Config
 Config.set("graphics", "width", 360)
 Config.set("graphics", "height", 640)
 
+from libs.screens.home_page import HomePage
 from kivymd.tools.hotreload.app import MDApp
-from kivymd.uix.label import MDLabel
 
 class MainApp(MDApp):
 
@@ -12,9 +12,7 @@ class MainApp(MDApp):
         super().__init__(**kwargs)
 
     def build_app(self):
-
-        self.theme_cls.theme_style = "Dark"
-        return MDLabel(text="CoreProject", halign="center")
+        return HomePage()
 
 if __name__ == "__main__":
     MainApp().run()
