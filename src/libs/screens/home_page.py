@@ -12,7 +12,7 @@ class HomePage(MDScreen):
         self.add_widget(self.app_bar())
 
     # AppBar layout
-    def app_bar(self):
+    def app_bar(self) -> MDBoxLayout:
         empty_space = Widget()
 
         # Appbar elements
