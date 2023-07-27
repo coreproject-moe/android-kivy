@@ -15,41 +15,31 @@ class HomePage(MDScreen):
 
     # AppBar layout
     def app_bar(self) -> MDBoxLayout:
-        empty_space = Widget()
+        Widget()
 
         # Appbar elements
         app_bar_layout = MDRelativeLayout(
-            size_hint_y = 0.1,
+            size_hint_y=0.1,
             pos_hint={"top": 1},
         )
         # CoreProject logo
         core_logo = MDFillRoundFlatButton(
-            text="Logo",
-            pos_hint={"top": 1, "center_y": 0.5, "x": 0.035}
+            text="Logo", pos_hint={"top": 1, "center_y": 0.5, "x": 0.035}
         )
         # Right side elements
         appbar_right = MDBoxLayout(
             orientation="horizontal",
             spacing="5dp",
-            pos_hint = {"right": 0.96},
-            size_hint_x = None,
-            width = "228dp"
+            pos_hint={"right": 0.96},
+            size_hint_x=None,
+            width="228dp",
         )
         # Search button
-        search_button = MDFillRoundFlatIconButton(
-            text="Search",
-            pos_hint = {"center_y": 0.5}
-        )
+        search_button = MDFillRoundFlatIconButton(text="Search", pos_hint={"center_y": 0.5})
         # Notification button
-        notification_button = MDFillRoundFlatButton(
-            text="Noti",
-            pos_hint = {"center_y": 0.5}
-        )
+        notification_button = MDFillRoundFlatButton(text="Noti", pos_hint={"center_y": 0.5})
         # Profile button
-        profile_button = MDFillRoundFlatButton(
-            text="Tokito",
-            pos_hint = {"center_y": 0.5}
-        )
+        profile_button = MDFillRoundFlatButton(text="Tokito", pos_hint={"center_y": 0.5})
         # Add widgets to the main Appbar layout
         app_bar_layout.add_widget(core_logo)
         app_bar_layout.add_widget(appbar_right)
