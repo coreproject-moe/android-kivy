@@ -24,7 +24,7 @@ class HomePage(MDScreen):
         )
         # CoreProject logo
         core_logo = MDFillRoundFlatButton(
-            text="Logo", pos_hint={"top": 1, "center_y": 0.5, "x": 0.035}
+            text="Logo", pos_hint={"center_y": 0.5, "x": 0.035}
         )
         # Right side elements
         appbar_right = MDBoxLayout(
