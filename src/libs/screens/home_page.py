@@ -5,7 +5,6 @@ from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.relativelayout import MDRelativeLayout
 from kivymd.uix.button import MDFillRoundFlatButton, MDFillRoundFlatIconButton
 
-
 class HomePage(MDScreen):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -14,9 +13,7 @@ class HomePage(MDScreen):
         self.add_widget(self.app_bar())
 
     # AppBar layout
-    def app_bar(self) -> MDBoxLayout:
-        Widget()
-
+    def app_bar(self) -> MDRelativeLayout:
         # Appbar elements
         app_bar_layout = MDRelativeLayout(
             size_hint_y=0.1,
