@@ -3,7 +3,6 @@ from kivy import Config
 # import screens
 from libs.screens.home_screen import HomeScreen
 
-
 # config window size
 Config.set("graphics", "width", 360)
 Config.set("graphics", "height", 640)
