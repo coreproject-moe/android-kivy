@@ -5,7 +5,7 @@ env:
 
 name: Android
 jobs:
-    Build:
+    build android apk:
         strategy:
             fail-fast: false
             matrix:
