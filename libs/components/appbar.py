@@ -4,6 +4,8 @@ from kivymd.uix.button import (
     MDFillRoundFlatButton,
     MDFillRoundFlatIconButton,
 )
+from kivy.graphics.svg import Svg
+from kivy.uix.widget import Widget
 
 
 def appbar() -> MDRelativeLayout:
@@ -15,13 +17,13 @@ def appbar() -> MDRelativeLayout:
         },
     )
     # CoreProject logo
-    core_logo = MDFillRoundFlatButton(
-        text="Logo",
-        pos_hint={
-            "center_y": 0.5,
-            "x": 0.035,
-        },
-    )
+    core_logo = Widget()
+    with core_logo.canvas:
+        Svg(
+            source="static/core_logo.svg",
+            bezier_points=512,
+            circle_points=512,
+        )
 
     # Buttons
     appbar_buttons = {
