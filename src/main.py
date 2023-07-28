@@ -1,12 +1,15 @@
 from kivy import Config
 
 # import screens
-from kivymd.tools.hotreload.app import MDApp
 from libs.screens.home_screen import HomeScreen
 
+
 # config window size
-Config.set("graphics", "width", 360)
-Config.set("graphics", "height", 640)
+Config.set("graphics", "width", 360)  # noqa: E402
+Config.set("graphics", "height", 640)  # noqa: E402
+
+# MdTool overrides the config
+from kivymd.tools.hotreload.app import MDApp
 
 
 class MainApp(MDApp):
