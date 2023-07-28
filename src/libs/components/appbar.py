@@ -5,6 +5,7 @@ from kivymd.uix.button import (
     MDFillRoundFlatIconButton,
 )
 
+
 def appbar() -> MDRelativeLayout:
     # Appbar elements
     app_bar_layout = MDRelativeLayout(
