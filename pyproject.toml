@@ -2,19 +2,20 @@
 name = "android"
 version = "0.1.0"
 description = "A modern android app for CoreProject"
-authors = ["baseplate-admin","tokitou-san"]
+authors = ["baseplate-admin <baseplate-admin@coreproject.moe>","tokitou-san <tokito@coreproject.moe>"]
 license = "AGPL-v3"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.7"
-kivy = "^2.2.1"
-kivymd = "^1.1.1"
+python = "^3.8"
+kivy = ">=2.2.1"
+kivymd = ">=1.1.1"
 cython = "0.29.36"
 buildozer = { version="^1.5.0", platform='linux' }
 
 [tool.poetry.group.dev.dependencies]
 watchdog = "^3.0.0"
+poethepoet = "^0.21.1"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
@@ -55,3 +56,6 @@ dummy-variable-rgx = "^(_+|(_+[a-zA-Z0-9_]*[a-zA-Z0-9]+?))$"
 
 # Assume Python 3.11
 target-version = "py311"
+
+[tool.poe.tasks]
+dev = 'python ./src/main.py'
