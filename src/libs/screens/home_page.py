@@ -65,7 +65,7 @@ class HomePage(MDScreen):
             width="228dp",
         )
         # Add widgets to `appbar_right`
-        for button in appbar_buttons:
+        for button in appbar_buttons.values():
             appbar_right.add_widget(button)
 
         # Add widgets to the main Appbar layout
