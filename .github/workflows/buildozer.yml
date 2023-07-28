@@ -1,9 +1,9 @@
-on: [pull_request]
-
 env:
     PYTHONFORANDROID_PREREQUISITES_INSTALL_INTERACTIVE: 0
 
 name: Android
+on:
+    pull_request: master
 jobs:
     Build:
         strategy:
