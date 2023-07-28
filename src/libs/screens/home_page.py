@@ -1,9 +1,9 @@
 from kivy.utils import get_color_from_hex
 from kivymd.uix.screen import MDScreen
-from kivy.uix.widget import Widget
 from kivymd.uix.boxlayout import MDBoxLayout
 from kivymd.uix.relativelayout import MDRelativeLayout
 from kivymd.uix.button import MDFillRoundFlatButton, MDFillRoundFlatIconButton
+
 
 class HomePage(MDScreen):
     def __init__(self, *args, **kwargs):
