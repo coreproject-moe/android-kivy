@@ -2,12 +2,12 @@ env:
     PYTHONFORANDROID_PREREQUISITES_INSTALL_INTERACTIVE: 0
 
 name: Build and test android APK
+
 on:
     pull_request:
     push:
         branches:
             - main
-
 jobs:
     build:
         strategy:
