@@ -19,7 +19,11 @@ def appbar() -> MDRelativeLayout:
     # CoreProject logo
     core_logo = Widget()
     with core_logo.canvas:
-        Svg("static/core_logo.svg")
+        svg = Svg(
+            source="static/core_logo.svg",
+            bezier_points=512,
+            circle_points=512,
+        )
 
     # Buttons
     appbar_buttons = {
