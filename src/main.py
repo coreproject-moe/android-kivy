@@ -1,4 +1,6 @@
 from kivy import Config
+
+
 from libs.screens.home_page import HomePage
 from kivymd.tools.hotreload.app import MDApp
 
