@@ -1,7 +1,10 @@
 name: Test with Pytest
 
-on: [push]
-
+on:
+    pull_request:
+    push:
+        branches:
+            - main
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -25,7 +28,7 @@ jobs:
             - name: Install dependency
               run: |
                   poetry install --sync --no-interaction --no-root
-                  poetry shell
+
             - name: Test with pytest
               run: |
-                  pytest .
+                  poetry run pytest .
