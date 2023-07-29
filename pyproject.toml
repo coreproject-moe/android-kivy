@@ -62,6 +62,7 @@ target-version = "py311"
 [tool.poe.tasks]
 dev = 'python ./main.py'
 test = 'pytest .'
+
 [tool.pytest.ini_options]
 pythonpath = [
   "."
