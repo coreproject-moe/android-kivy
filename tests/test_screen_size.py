@@ -1,5 +1,3 @@
-
-
 class TestApp(GraphicUnitTest):
     def test_screen_size(self):
         app = MainApp()
