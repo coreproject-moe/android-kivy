@@ -1,4 +1,3 @@
-import pytest
 from kivy.tests.common import GraphicUnitTest
 from kivy.config import Config
 from main import MainApp
@@ -9,7 +8,7 @@ class TestApp(GraphicUnitTest):
         # Set the desired window size for testing
         Config.set("graphics", "width", 360)
         Config.set("graphics", "height", 640)
-        super(TestApp, self).setUp()
+        super().setUp()
 
     def test_screen_size(self):
         app = MainApp()
