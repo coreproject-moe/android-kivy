@@ -15,7 +15,10 @@ class HomeScreen(MDScreen):
         self.add_widget(appbar())
         carousel = Carousel(direction="right")
         for i in [
-            "https://raw.githubusercontent.com/tokitou-san/CoreProject-V3-UI/4c44e794a89d8d0611eebb91d72fe6353f62c48f/static/images/characters/eliane/eliane.png"
+            "https://raw.githubusercontent.com/tokitou-san/CoreProject-V3-UI/4c44e794a89d8d0611eebb91d72fe6353f62c48f/static/images/characters/eliane/eliane.png",
+            "https://raw.githubusercontent.com/tokitou-san/CoreProject-V3-UI/4c44e794a89d8d0611eebb91d72fe6353f62c48f/static/images/characters/eliane/eliane_2.png",
+            "https://raw.githubusercontent.com/tokitou-san/CoreProject-V3-UI/4c44e794a89d8d0611eebb91d72fe6353f62c48f/static/images/characters/exy/exy.png",
+            "https://raw.githubusercontent.com/tokitou-san/CoreProject-V3-UI/4c44e794a89d8d0611eebb91d72fe6353f62c48f/static/images/characters/futaba/futaba.png",
         ]:
             image = AsyncImage(source=i, fit_mode="contain")
             carousel.add_widget(image)
