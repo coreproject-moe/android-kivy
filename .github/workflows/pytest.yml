@@ -1,4 +1,4 @@
-name: Python package
+name: Test with Pytest
 
 on: [push]
 
@@ -25,6 +25,7 @@ jobs:
             - name: Install dependency
               run: |
                   poetry install --sync --no-interaction --no-root
+                  poetry shell
             - name: Test with pytest
               run: |
                   pytest .
