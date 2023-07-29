@@ -1,6 +1,4 @@
-import pytest
 from kivy.tests.common import GraphicUnitTest
-from kivy.config import Config
 from main import MainApp
 
 
