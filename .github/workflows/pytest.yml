@@ -1,4 +1,6 @@
 name: Test with Pytest
+env:
+    DISPLAY: ':99.0'
 
 on:
     pull_request:
