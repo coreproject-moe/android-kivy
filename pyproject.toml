@@ -17,6 +17,7 @@ buildozer = { version="^1.5.0", platform='linux' }
 watchdog = "^3.0.0"
 poethepoet = "^0.21.1"
 ruff = "^0.0.280"
+pytest = "^7.4.0"
 
 [build-system]
 build-backend = "poetry.core.masonry.api"
@@ -60,3 +61,8 @@ target-version = "py311"
 
 [tool.poe.tasks]
 dev = 'python ./main.py'
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
