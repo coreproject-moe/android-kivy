@@ -13,7 +13,10 @@ class HomeScreen(MDScreen):
 
         self.md_bg_color = get_color_from_hex("#03020c")
         self.add_widget(appbar())
-        carousel = Carousel(direction="right")
+        carousel = Carousel(
+            direction="right",
+            loop=True,
+        )
         for i in [
             "https://raw.githubusercontent.com/tokitou-san/CoreProject-V3-UI/4c44e794a89d8d0611eebb91d72fe6353f62c48f/static/images/characters/eliane/eliane.png",
             "https://raw.githubusercontent.com/tokitou-san/CoreProject-V3-UI/4c44e794a89d8d0611eebb91d72fe6353f62c48f/static/images/characters/eliane/eliane_2.png",
