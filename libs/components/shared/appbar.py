@@ -5,9 +5,10 @@ from kivymd.uix.button import (
     MDFillRoundFlatIconButton,
 )
 
+
 class AppBar(MDRelativeLayout):
     def __init__(self, *args, **kwargs) -> None:
-        super(AppBar, self).__init__(*args, **kwargs)
+        super().__init__(*args, **kwargs)
 
         self.size_hint_y = 0.1
         self.pos_hint = {"top": 1}
