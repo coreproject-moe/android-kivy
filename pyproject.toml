@@ -16,7 +16,7 @@ buildozer = { version="^1.5.0", platform='linux' }
 [tool.poetry.group.dev.dependencies]
 watchdog = "^3.0.0"
 poethepoet = "^0.22.0"
-ruff = "^0.0.284"
+ruff = "^0.0.285"
 pytest = "^7.4.0"
 
 [build-system]
