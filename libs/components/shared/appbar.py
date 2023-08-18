@@ -13,10 +13,10 @@ class AppBar(MDRelativeLayout):
         self.size_hint_y = 0.1
         self.pos_hint = {"top": 1}
         # Add widgets
-        self.add_widget(self._create_logo())
-        self.add_widget(self._create_right_section())
+        self.add_widget(self._build_logo_())
+        self.add_widget(self._build_right_section_())
 
-    def _create_logo(self) -> MDFillRoundFlatButton:
+    def _build_logo_(self) -> MDFillRoundFlatButton:
         # CoreProject logo
         return MDFillRoundFlatButton(
             text="Logo",
@@ -26,7 +26,7 @@ class AppBar(MDRelativeLayout):
             },
         )
 
-    def _create_right_section(self) -> MDBoxLayout:
+    def _build_right_section_(self) -> MDBoxLayout:
         # Buttons
         appbar_buttons = {
             "search_button": MDFillRoundFlatIconButton(
