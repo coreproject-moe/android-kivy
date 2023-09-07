@@ -6,11 +6,13 @@ from kivymd.uix.button import (
 )
 
 
-class AppBar(MDRelativeLayout):
+class AppBar(MDBoxLayout):
     def __init__(self, *args, **kwargs) -> None:
         super().__init__(*args, **kwargs)
 
-        self.size_hint_y = 0.1
+        self.adaptive_height = True
+        self.padding = 10
+        self.spacing = 5
         self.pos_hint = {"top": 1}
         # Add widgets
         self.add_widget(self._build_logo_())
@@ -18,48 +20,27 @@ class AppBar(MDRelativeLayout):
 
     def _build_logo_(self) -> MDFillRoundFlatButton:
         # CoreProject logo
-        return MDFillRoundFlatButton(
-            text="Logo",
-            pos_hint={
-                "center_y": 0.5,
-                "x": 0.035,
-            },
-        )
+        return MDFillRoundFlatButton(text="Logo")
 
-    def _build_right_section_(self) -> MDBoxLayout:
+    def _build_right_section_(self) -> MDRelativeLayout:
+        appbar_right = MDRelativeLayout()
         # Buttons
         appbar_buttons = {
-            "search_button": MDFillRoundFlatIconButton(
-                text="Search",
-                pos_hint={
-                    "center_y": 0.5,
-                },
-            ),
-            "notification_button": MDFillRoundFlatButton(
-                text="Noti",
-                pos_hint={
-                    "center_y": 0.5,
-                },
-            ),
-            "profile_button": MDFillRoundFlatButton(
-                text="Tokito",
-                pos_hint={
-                    "center_y": 0.5,
-                },
-            ),
+            "search_button": MDFillRoundFlatIconButton(text="Search"),
+            "notification_button": MDFillRoundFlatButton(text="Noti"),
+            "profile_button": MDFillRoundFlatButton(text="Tokito"),
         }
         # Right side container
-        appbar_right = MDBoxLayout(
+        buttons_layout = MDBoxLayout(
             orientation="horizontal",
-            spacing="5dp",
-            pos_hint={
-                "right": 0.96,
-            },
-            size_hint_x=None,
-            width="228dp",
+            adaptive_size=True,
+            spacing=5,
+            pos_hint={"right": 1}
         )
         # Add widgets to `appbar_right`
         for button in appbar_buttons.values():
-            appbar_right.add_widget(button)
+            buttons_layout.add_widget(button)
+        # Add appbar_right to main layout
+        appbar_right.add_widget(buttons_layout)
 
         return appbar_right
