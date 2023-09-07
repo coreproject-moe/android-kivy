@@ -24,15 +24,14 @@ class AppBar(MDBoxLayout):
 
     def _build_right_section_(self) -> MDRelativeLayout:
         appbar_right = MDRelativeLayout()
-        # Buttons
+        # Buttons mapping
         appbar_buttons = {
             "search_button": MDFillRoundFlatIconButton(text="Search"),
             "notification_button": MDFillRoundFlatButton(text="Noti"),
             "profile_button": MDFillRoundFlatButton(text="Tokito"),
         }
-        # Right side container
+        # Buttons container
         buttons_layout = MDBoxLayout(
-            orientation="horizontal",
             adaptive_size=True,
             spacing=5,
             pos_hint={"right": 1}
@@ -40,7 +39,7 @@ class AppBar(MDBoxLayout):
         # Add widgets to `appbar_right`
         for button in appbar_buttons.values():
             buttons_layout.add_widget(button)
-        # Add appbar_right to main layout
+        # Add buttons_layout to main layout
         appbar_right.add_widget(buttons_layout)
 
         return appbar_right
