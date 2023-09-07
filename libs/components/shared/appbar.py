@@ -31,9 +31,7 @@ class AppBar(MDBoxLayout):
             "profile_button": MDFillRoundFlatButton(text="Tokito"),
         }
         # Buttons container
-        buttons_layout = MDBoxLayout(
-            adaptive_size=True, spacing=5, pos_hint={"right": 1}
-        )
+        buttons_layout = MDBoxLayout(adaptive_size=True, spacing=5, pos_hint={"right": 1})
         # Add widgets to `appbar_right`
         for button in appbar_buttons.values():
             buttons_layout.add_widget(button)
