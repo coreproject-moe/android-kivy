@@ -32,10 +32,7 @@ class AppBar(MDBoxLayout):
         }
         # Right side container
         buttons_layout = MDBoxLayout(
-            orientation="horizontal",
-            adaptive_size=True,
-            spacing=5,
-            pos_hint={"right": 1}
+            orientation="horizontal", adaptive_size=True, spacing=5, pos_hint={"right": 1}
         )
         # Add widgets to `appbar_right`
         for button in appbar_buttons.values():

@@ -1,7 +1,5 @@
 from kivy.utils import get_color_from_hex
 from kivymd.uix.screen import MDScreen
-from kivy.uix.carousel import Carousel
-from kivy.uix.image import AsyncImage
 
 # import components
 from libs.components.shared.appbar import AppBar
