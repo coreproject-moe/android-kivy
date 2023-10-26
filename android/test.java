@@ -12,4 +12,3 @@ if (sRuntime == null) {
   // GeckoRuntime can only be initialized once per process
   sRuntime = GeckoRuntime.create(this);
 }
-
