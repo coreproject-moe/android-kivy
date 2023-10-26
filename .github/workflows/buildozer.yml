@@ -45,3 +45,9 @@ jobs:
 
             - name: Build Buildozer
               run: poetry run buildozer android debug
+
+            - name: Upload artifacts
+                uses: actions/upload-artifact@v2
+                with:
+                    name: package
+                    path: ${{ steps.buildozer.outputs.filename }}
