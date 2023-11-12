@@ -7,7 +7,7 @@ license = "AGPL-v3"
 readme = "README.md"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.10"
 kivy = ">=2.2.1"
 kivymd = ">=1.1.1"
 cython = "3.0.5"
