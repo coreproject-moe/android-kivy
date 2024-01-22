@@ -401,16 +401,16 @@ requests = "*"
 
 [[package]]
 name = "kivymd"
-version = "1.1.1"
+version = "1.2.0"
 description = "Set of widgets for Kivy inspired by Google's Material Design"
 optional = false
 python-versions = ">=3.7"
 files = [
-    {file = "kivymd-1.1.1.tar.gz", hash = "sha256:931a0435c2a079c6dca755c50d0023b5e1c907f7b4ac8bb9e2834daa3cefe906"},
+    {file = "kivymd-1.2.0.tar.gz", hash = "sha256:2d33e2c59259998e93aee55acde647a4a20e5a0f962469db24ee4c9ec586962e"},
 ]
 
 [package.dependencies]
-kivy = ">=2.0.0"
+kivy = ">=2.2.0"
 pillow = "*"
 
 [package.extras]
