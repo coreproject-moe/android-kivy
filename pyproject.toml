@@ -6,11 +6,15 @@ authors = ["baseplate-admin <baseplate-admin@coreproject.moe>","tokitou-san <tok
 license = "AGPL-v3"
 readme = "README.md"
 
+[[tool.poetry.source]]
+name = "pypi-public"
+url = "https://pypi.org/simple/"
+
 [tool.poetry.dependencies]
 python = "^3.8"
 kivy = ">=2.2.1"
 kivymd = ">=1.1.1"
-cython = "3.0.8"
+cython = ">=3.0.8"
 buildozer = { version="^1.5.0", platform='linux' }
 
 [tool.poetry.group.dev.dependencies]
